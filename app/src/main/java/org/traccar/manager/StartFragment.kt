@@ -100,8 +100,8 @@ class StartFragment : Fragment(), View.OnClickListener {
     }
 
     private fun onSuccess() {
-        PreferenceManager.getDefaultSharedPreferences(activity)
-            .edit().putString(MainActivity.PREFERENCE_URL, serverField.text.toString()).apply()
+//        PreferenceManager.getDefaultSharedPreferences(activity)
+//            .edit().putString(MainActivity.PREFERENCE_URL, serverField.text.toString()).apply()
         activity.fragmentManager
             .beginTransaction().replace(android.R.id.content, MainFragment())
             .commitAllowingStateLoss()

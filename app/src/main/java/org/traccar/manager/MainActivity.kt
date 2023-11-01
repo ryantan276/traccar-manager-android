@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initContent() {
+        PreferenceManager.getDefaultSharedPreferences(this)
+            .edit().putString(PREFERENCE_URL, getString(R.string.default_url)).apply()
         if (PreferenceManager.getDefaultSharedPreferences(this).contains(PREFERENCE_URL)) {
             fragmentManager.beginTransaction().add(android.R.id.content, MainFragment()).commit()
         } else {
